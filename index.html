@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="shinjuyoung" />
+  <meta name="description"
+    cotent="에어비앤비와 함께 잊지 못할 여행이 시작됩니다. 주변 또는 멀리 떨어진 장소에서 벌어지는 모험들을 찾아보고 전 세계의 독특한 숙소와 체험, 장소를 직접 체험해 보세요." />
+  <meta property="og:title" content="숙소, 체험, 장소를 모두 한 곳에서 - 에어비앤비" />
+  <meta property="og:description"
+    content="에어비앤비와 함께 잊지 못할 여행이 시작됩니다. 주변 또는 멀리 떨어진 장소에서 벌어지는 모험들을 찾아보고 전 세계의 독특한 숙소와 체험, 장소를 직접 체험해 보세요." />
+  <meta property="og:image"
+    content="https://a0.muscache.com/airbnb/static/logos/trips-og-1280x630-9de9c338cc3fd9b5663fb80be0cbe8c2.jpg" />
+
+  <title>이제, 여행은 가까운 곳에서. · Airbnb</title>
+
+  <!-- favicon -->
+  <link rel="icon" href="./img/common/favicon.png">
+  <!-- jquery-ui -->
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <!-- bxSlider-ui -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  <link rel="stylesheet" href="./css/main.css" />
+  <!-- tablet style -->
+  <!--<link rel="stylesheet" media="only screen and (min-width:768px) and (max-width:1119px)"
+    href="./css/main_tablet.css" />-->
+  <!-- mobile style -->
+  <!--<link rel="stylesheet" media="only screen and (min-width:320px) and (max-width:767px)" href="./css/main_mobile.css" />-->
+
+  <!-- fontawesome -->
+  <script src="https://kit.fontawesome.com/8bda39e007.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <header>
+    <div class="top-banner on">
+      <div class="ui-cont">
+        <a href="#"><span>에어비앤비의 코로나19 대응 방안에 대한 최신 정보를 확인하세요.</span></a>
+        <a href="javascript:void(0);" onclick="topBannerEvt();" class="close">닫기</a>
+      </div>
+    </div>
+    <div class="ui-header">
+      <div class="util-wrap ui-cont">
+        <ul>
+          <li class="language">
+            <img src="./img/common/global.png" class="icon" alt="언어선택">
+            <a href="#select-language" class="show-modal">한국어(KR)</a>
+          </li>
+          <li class="exchange">
+            <a href="#select-exchange" class="show-modal">₩(KRW)</a>
+          </li>
+          <li class="join">
+            <a href="#">회원가입</a>
+          </li>
+          <li class="regist">
+            <a href="#login" class="show-modal btn b-small btn-pink-gradient">로그인</a>
+          </li>
+        </ul>
+      </div>
+      <div class="gnb-wrap">
+        <div class="gnb ui-cont">
+          <h1>
+            <a href="index.html">
+              <img src="./img/common/airbnb_bi_v1.png" alt="에어비앤비" />
+            </a>
+          </h1>
+          <nav>
+            <ul class="nav-grp">
+              <li><a href="#">숙소 호스트 되기</a></li>
+              <li><a href="#">체험 호스팅 하기</a></li>
+              <li><a href="#">도움말</a></li>
+            </ul>
+            <ul class="nav-aside">
+              <li class="icon gnb-search on">
+                <a href="#" class="blind search-icon">search</a>
+                <div style="display:none;">
+                  <form action="#" onsubmit="" class="search-area">
+                    <input type="text" id="search" class="gnb-input" value="에어비앤비와 함께 떠나요.">
+                    <input type="image" src="" class="search_btn">
+                  </form>
+                </div>
+              </li>
+              <li class="icon gnb-mypage on">
+                <a href="javascript:void(0)" onclick="alert('로그인 후 이용해주세요.');" class="blind mypage-icon">mypage</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- modal : s -->
+  <div class="modal">
+    <!-- 언어 : s -->
+    <div id="select-language" class="modal-box">
+      <div class="modal-cont">
+        <div class="close"><img src="./img/common/close_btn_gray_15x15.png" alt="닫기"></div>
+        <div class="cont-wrap">
+          <div class="cont-top">
+            <h2 class="tit">언어와 지역을 선택하세요.</h2>
+          </div>
+          <div class="cont-inner">
+            <ul class="language-grp">
+              <li class="thum select"><a href="javascript:void(0)">
+                  <div class="name">한국어</div>
+                  <div class="area">대한민국</div>
+                </a></li>
+              <li class="thum"><a href="javascript:void(0)">
+                  <div class="name">Azərbaycan dili</div>
+                  <div class="area">Azərbaycan</div>
+                </a></li>
+              <li class="thum"><a href="javascript:void(0)">
+                  <div class="name">Bahasa Indonesia</div>
+                  <div class="area">Indonesia</div>
+                </a></li>
+              <li class="thum"><a href="javascript:void(0)">
+                  <div class="name">Bosanski</div>
+                  <div class="area">Bosna i Hercegovina</div>
+                </a></li>
+              <li class="thum"><a href="javascript:void(0)">
+                  <div class="name">Català</div>
+                  <div class="area">Espanya</div>
+                </a></li>
+              <li class="thum"><a href="javascript:void(0)">
+                  <div class="name">Čeština</div>
+                  <div class="area">Česká republika</div>
+                </a></li>
+              <li class="thum"><a href="javascript:void(0)">
+                  <div class="name">Crnogorski</div>
+                  <div class="area">Crna Gora</div>
+                </a></li>
+              <li class="thum"><a href="javascript:void(0)">
+                  <div class="name">Dansk</div>
+                  <div class="area">Danmark</div>
+                </a></li>
+              <li class="thum"><a href="javascript:void(0)">
+                  <div class="name">Deutsch</div>
+                  <div class="area">Deutschland</div>
+                </a></li>
+              <li class="thum"><a href="javascript:void(0)">
+                  <div class="name">Deutsch</div>
+                  <div class="area">Österreich</div>
+                </a></li>
+              <li class="thum"><a href="javascript:void(0)">
+                  <div class="name">Deutsch</div>
+                  <div class="area">Schweiz</div>
+                </a></li>
+              <li class="thum"><a href="javascript:void(0)">
+                  <div class="name">Eesti</div>
+                  <div class="area">Eesti</div>
+                </a></li>
+              <li class="thum"><a href="javascript:void(0)">
+                  <div class="name">English</div>
+                  <div class="area">Australia</div>
+                </a></li>
+              <li class="thum"><a href="javascript:void(0)">
+                  <div class="name">English</div>
+                  <div class="area">Canada</div>
+                </a></li>
+              <li class="thum"><a href="javascript:void(0)">
+                  <div class="name">English</div>
+                  <div class="area">Guyana</div>
+                </a></li>
+              <li class="thum"><a href="javascript:void(0)">
+                  <div class="name">English</div>
+                  <div class="area">India</div>
+                </a></li>
+              <li class="thum"><a href="javascript:void(0)">
+                  <div class="name">English</div>
+                  <div class="area">Ireland</div>
+                </a></li>
+              <li class="thum"><a href="javascript:void(0)">
+                  <div class="name">English</div>
+                  <div class="area">New Zealand</div>
+                </a></li>
+              <li class="thum"><a href="javascript:void(0)">
+                  <div class="name">English</div>
+                  <div class="area">Singapore</div>
+                </a></li>
+              <li class="thum"><a href="javascript:void(0)">
+                  <div class="name">English</div>
+                  <div class="area">United Arab Emirates</div>
+                </a></li>
+              <li class="thum"><a href="javascript:void(0)">
+                  <div class="name">Español</div>
+                  <div class="area">Argentina</div>
+                </a></li>
+              <li class="thum"><a href="javascript:void(0)">
+                  <div class="name">Español</div>
+                  <div class="area">Belice</div>
+                </a></li>
+              <li class="thum"><a href="javascript:void(0)">
+                  <div class="name">Español</div>
+                  <div class="area">Bolivia</div>
+                </a></li>
+              <li class="thum"><a href="javascript:void(0)">
+                  <div class="name">Español</div>
+                  <div class="area">Chile</div>
+                </a></li>
+              <li class="thum"><a href="javascript:void(0)">
+                  <div class="name">Español</div>
+                  <div class="area">Colombia</div>
+                </a></li>
+              <li class="thum"><a href="javascript:void(0)">
+                  <div class="name">Español</div>
+                  <div class="area">Costa Rica</div>
+                </a></li>
+              <li class="thum"><a href="javascript:void(0)">
+                  <div class="name">Español</div>
+                  <div class="area">Ecuador</div>
+                </a></li>
+              <li class="thum"><a href="javascript:void(0)">
+                  <div class="name">Español</div>
+                  <div class="area">El Salvador</div>
+                </a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 언어 : e -->
+    <!-- 통화 : s -->
+    <div id="select-exchange" class="modal-box">
+      <div class="modal-cont">
+        <div class="close"><img src="./img/common/close_btn_gray_15x15.png" alt="닫기"></div>
+        <div class="cont-wrap">
+          <div class="cont-top">
+            <h2 class="tit">통화를 선택하세요.</h2>
+          </div>
+          <div class="cont-inner">
+            <ul class="exchange-grp">
+              <li class="thum select">
+                <a href="javascript:void(0)">
+                  <div class="name">한국 원</div>
+                  <div class="unit">KRW - ₩</div>
+                </a>
+              </li>
+              <li class="thum">
+                <a href="javascript:void(0)">
+                  <div class="name">남아프리카공화국 란드</div>
+                  <div class="unit">ZAR - R</div>
+                </a>
+              </li>
+              <li class="thum">
+                <a href="javascript:void(0)">
+                  <div class="name">노르웨이 크로네</div>
+                  <div class="unit">NOK - kr</div>
+                </a>
+              </li>
+              <li class="thum">
+                <a href="javascript:void(0)">
+                  <div class="name">뉴질랜드 달러</div>
+                  <div class="unit">NZD - $</div>
+                </a>
+              </li>
+              <li class="thum">
+                <a href="javascript:void(0)">
+                  <div class="name">덴마크 크로네</div>
+                  <div class="unit">DKK - kr</div>
+                </a>
+              </li>
+              <li class="thum">
+                <a href="javascript:void(0)">
+                  <div class="name">러시아 루블</div>
+                  <div class="unit">RUB - ₽</div>
+                </a>
+              </li>
+              <li class="thum">
+                <a href="javascript:void(0)">
+                  <div class="name">루마니아 레우</div>
+                  <div class="unit">RON - lei</div>
+                </a>
+              </li>
+              <li class="thum">
+                <a href="javascript:void(0)">
+                  <div class="name">말레이시아 링깃</div>
+                  <div class="unit">MYR - RM</div>
+                </a>
+              </li>
+              <li class="thum">
+                <a href="javascript:void(0)">
+                  <div class="name">멕시코 페소</div>
+                  <div class="unit">MXN - $</div>
+                </a>
+              </li>
+              <li class="thum">
+                <a href="javascript:void(0)">
+                  <div class="name">모로코 디르함</div>
+                  <div class="unit">MAD</div>
+                </a>
+              </li>
+              <li class="thum">
+                <a href="javascript:void(0)">
+                  <div class="name">미국 달러</div>
+                  <div class="unit">USD - $</div>
+                </a>
+              </li>
+              <li class="thum">
+                <a href="javascript:void(0)">
+                  <div class="name">불가리아 레프</div>
+                  <div class="unit">BGN - лв.</div>
+                </a>
+              </li>
+              <li class="thum">
+                <a href="javascript:void(0)">
+                  <div class="name">브라질 레알</div>
+                  <div class="unit">BRL - R$</div>
+                </a>
+              </li>
+              <li class="thum">
+                <a href="javascript:void(0)">
+                  <div class="name">사우스아라비아 리얄</div>
+                  <div class="unit">SAR - SR</div>
+                </a>
+              </li>
+              <li class="thum">
+                <a href="javascript:void(0)">
+                  <div class="name">스웨덴 크로나</div>
+                  <div class="unit">SEK - kr</div>
+                </a>
+              </li>
+              <li class="thum">
+                <a href="javascript:void(0)">
+                  <div class="name">스위스 프랑</div>
+                  <div class="unit">CHF</div>
+                </a>
+              </li>
+              <li class="thum">
+                <a href="javascript:void(0)">
+                  <div class="name">신 타이완 달러</div>
+                  <div class="unit">TWD - $</div>
+                </a>
+              </li>
+              <li class="thum">
+                <a href="javascript:void(0)">
+                  <div class="name">싱가포르 달러</div>
+                  <div class="unit">SGD - $</div>
+                </a>
+              </li>
+              <li class="thum">
+                <a href="javascript:void(0)">
+                  <div class="name">아랍에미리트 디르함</div>
+                  <div class="unit">AED - ﺩ.ﺇ</div>
+                </a>
+              </li>
+              <li class="thum">
+                <a href="javascript:void(0)">
+                  <div class="name">영국 파운드</div>
+                  <div class="unit">GBP - £</div>
+                </a>
+              </li>
+              <li class="thum">
+                <a href="javascript:void(0)">
+                  <div class="name">우루과이 페소</div>
+                  <div class="unit">UYU - $U</div>
+                </a>
+              </li>
+              <li class="thum">
+                <a href="javascript:void(0)">
+                  <div class="name">유로</div>
+                  <div class="unit">EUR - €</div>
+                </a>
+              </li>
+              <li class="thum">
+                <a href="javascript:void(0)">
+                  <div class="name">이스라엘 신 셰켈</div>
+                  <div class="unit">ILS - ₪</div>
+                </a>
+              </li>
+              <li class="thum">
+                <a href="javascript:void(0)">
+                  <div class="name">인도 루피</div>
+                  <div class="unit">INR - ₹</div>
+                </a>
+              </li>
+              <li class="thum">
+                <a href="javascript:void(0)">
+                  <div class="name">일본 엔</div>
+                  <div class="unit">JPY - ¥</div>
+                </a>
+              </li>
+              <li class="thum">
+                <a href="javascript:void(0)">
+                  <div class="name">중국 위안</div>
+                  <div class="unit">CNY - ￥</div>
+                </a>
+              </li>
+              <li class="thum">
+                <a href="javascript:void(0)">
+                  <div class="name">체코 코루나</div>
+                  <div class="unit">CZK - Kč</div>
+                </a>
+              </li>
+              <li class="thum">
+                <a href="javascript:void(0)">
+                  <div class="name">칠레 페소</div>
+                  <div class="unit">CLP - $</div>
+                </a>
+              </li>
+              <li class="thum">
+                <a href="javascript:void(0)">
+                  <div class="name">캐나다 달러</div>
+                  <div class="unit">CAD - $</div>
+                </a>
+              </li>
+              <li class="thum">
+                <a href="javascript:void(0)">
+                  <div class="name">코스타리카 콜론</div>
+                  <div class="unit">CRC - ₡</div>
+                </a>
+              </li>
+              <li class="thum">
+                <a href="javascript:void(0)">
+                  <div class="name">콜롬비아 페소</div>
+                  <div class="unit">COP - $</div>
+                </a>
+              </li>
+              <li class="thum">
+                <a href="javascript:void(0)">
+                  <div class="name">크로아티아 쿠나</div>
+                  <div class="unit">HRK - kn</div>
+                </a>
+              </li>
+              <li class="thum">
+                <a href="javascript:void(0)">
+                  <div class="name">태국 바트</div>
+                  <div class="unit">THB - ฿</div>
+                </a>
+              </li>
+              <li class="thum">
+                <a href="javascript:void(0)">
+                  <div class="name">터키 리라</div>
+                  <div class="unit">TRY - ₺</div>
+                </a>
+              </li>
+              <li class="thum">
+                <a href="javascript:void(0)">
+                  <div class="name">페루 솔</div>
+                  <div class="unit">PEN - S/</div>
+                </a>
+              </li>
+              <li class="thum">
+                <a href="javascript:void(0)">
+                  <div class="name">폴란드 즐로티</div>
+                  <div class="unit">PLN - zł</div>
+                </a>
+              </li>
+              <li class="thum">
+                <a href="javascript:void(0)">
+                  <div class="name">필리핀 페소</div>
+                  <div class="unit">PHP - ₱</div>
+                </a>
+              </li>
+              <li class="thum">
+                <a href="javascript:void(0)">
+                  <div class="name">헝가리 포린트</div>
+                  <div class="unit">HUF - Ft</div>
+                </a>
+              </li>
+              <li class="thum">
+                <a href="javascript:void(0)">
+                  <div class="name">호주 달러</div>
+                  <div class="unit">AUD - $</div>
+                </a>
+              </li>
+              <li class="thum">
+                <a href="javascript:void(0)">
+                  <div class="name">홍콩 달러</div>
+                  <div class="unit">HKD - $</div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 통화 : e -->
+    <!-- 로그인 : s -->
+    <div id="login" class="modal-box section-login">
+      <div class="modal-cont">
+        <div class="close"><img src="./img/common/close_btn_gray_15x15.png" alt="닫기"></div>
+        <div class="cont-wrap">
+          <div class="cont-top">
+            <h2 class="tit">로그인</h2>
+          </div>
+          <div class="cont-inner">
+            <div class="login-form">
+              <form action="">
+                <input type="text" placeholder="아이디를 입력해주세요." class="w-full">
+                <input type="password" placeholder="비밀번호를 입력해주세요." class="w-full">
+                <div class="checkbox-save">
+                  <label for="password-save" class="label-checkbox">비밀번호 저장</label>
+                  <input type="checkbox" id="password-save" name="password-save" class="checkbox-save">
+                  <div class="login-search">
+                    <a href="javascript:void(0)" class="link">아이디 찾기</a>
+                    <a href="javascript:void(0)" class="link">비밀번호 찾기</a>
+                  </div>
+                </div>
+                <button type="submit" class="submit btn b-mid btn-pink-gradient w-full"><span>로그인</span></button>
+              </form>
+            </div>
+            <div class="join-btn">
+              <a href="javascript:void(0)" class="w-full btn b-mid btn-pink-line">회원가입</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 로그인 : e -->
+    <div class="dimmed"></div>
+  </div>
+  <!-- modal : e -->
+
+  <section id="main">
+    <!-- contents : s -->
+    <div id="main">
+      <!-- 메인 슬라이드 배너 : s -->
+      <div class="topvis-banner-wrap">
+        <ul class="topvis-banner">
+          <li class="banner">
+            <a href="#">
+              <div class="ui-cont">
+                <div class="banner-introduce">
+                  <span class="tag">Accommodation</span><span class="tag">Policy</span>
+                  <p class="tit">Collaborate to launch local cleaning guidelines</p>
+                  <p class="explain">에어비앤비가 한국관광공사와 함께 숙소 소독방법 등 청결 및 안전관리 방안이 담긴 ‘숙소 안전 가이드라인’을 제작해 배포합니다.</p>
+                </div>
+              </div>
+              <img src="./img/main/banner01.jpg" alt="Collaborate to launch local cleaning guidelines">
+            </a>
+          </li>
+          <li class="banner">
+            <a href="https://www.naver.com ">
+              <div class="ui-cont">
+                <div class="banner-introduce">
+                  <span class="tag">Experience</span>
+                  <p class="tit">미쉐린 스타 셰프들과<br>온라인 쿠킹 클래스 오픈</p>
+                  <p class="explain">모모푸쿠 레스토랑 그룹 창업자인 데이비드 장, 610 매그놀리아를 운영 중인 스타 셰프 에드워드 리, 레스토랑 스와니예의 오너 셰프인 이준 등
+                    세계적으로 유명한 미쉐린 셰프들의 요리 클래스! 에어비앤비에서 체험해보세요.</p>
+                </div>
+              </div>
+              <img src="./img/main/banner02.jpg" alt="미쉐린 스타 셰프들과 온라인 쿠킹 클래스 오픈">
+            </a>
+          </li>
+        </ul>
+
+        <div class="ui-cont">
+          <!-- 에어비앤비 예약 패널 : s -->
+          <div class="topvis-right-area">
+            <div class="cont-tabs">
+              <ul class="tabs">
+                <li class="on"><a href="#panel01">숙소</a></li>
+                <li><a href="#panel02">체험</a></li>
+                <li class="no-tab-cont"><a href="#panel03" class="badge-new">온라인 체험</a></li>
+              </ul>
+            </div>
+            <div class="tab-cont panel-cont">
+              <div id="panel01" class="box-show on">
+                <ul>
+                  <li class="field-location">
+                    <div class="tit">위치</div>
+                    <label class="sub-tit blind">위치</label>
+                    <input type="text" name="location-search" placeholder="어디로 여행가세요?" class="w-full">
+                  </li>
+                  <li class="field-date flex-grp">
+                    <div class="form-grp">
+                      <div class="tit">체크인</div>
+                      <label class="sub-tit blind" for="checkin">체크인</label>
+                      <input type="text" placeholder="yyyy-mm-dd" maxlength="8" name="in-date" id="checkin"
+                        class="date-picker w-full" onclick="$('#checkin').datepicker('show');">
+                    </div>
+                    <span>~</span>
+                    <div class="form-grp">
+                      <div class="tit">체크아웃</div>
+                      <label class="sub-tit blind" for="checkout">체크아웃</label>
+                      <input type="text" placeholder="yyyy-mm-dd" maxlength="8" name="in-date" id="checkout"
+                        class="date-picker w-full" onclick="$('#checkout').datepicker('show');">
+                    </div>
+                  </li>
+                  <li class="field-count-guest">
+                    <div class="tit">인원</div>
+                    <div class="flex-grp">
+                      <div class="count-wrap adult">
+                        <label class="sub-tit" for="count-adult">성인</label>
+                        <div class="count">
+                          <form action="">
+                            <input type="button" class="btn down" onclick="javascript:this.form.adult.value--;">
+                            <input type="text" readonly="readonly" placeholder="0" id="count-adult" class="count-num"
+                              name="adult">
+                            <input type="button" class="btn up" onclick="javascript:this.form.adult.value++;">
+                          </form>
+                        </div>
+                      </div>
+                      <div class="count-wrap kid">
+                        <label class="sub-tit" for="count-kid">어린이</label>
+                        <div class="count">
+                          <form action="">
+                            <input type="button" class="btn down" onclick="javascript:this.form.kid.value--;">
+                            <input type="text" readonly="readonly" placeholder="0" id="count-kid" class="count-num"
+                              name="kid">
+                            <input type="button" class="btn up" onclick="javascript:this.form.kid.value++;">
+                          </form>
+                        </div>
+                      </div>
+                      <div class="count-wrap toddler">
+                        <label class="sub-tit" for="count-toddler">유아</label>
+                        <div class="count">
+                          <form action="">
+                            <input type="button" class="btn down" onclick="javascript:this.form.toddler.value--;">
+                            <input type="text" readonly="readonly" placeholder="0" placeholder="0" id="count-toddler"
+                              class="count-num" name="toddler">
+                            <input type="button" class="btn up" onclick="javascript:this.form.toddler.value++;">
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="field-submit-btn">
+                    <button type="submit" class="submit btn b-mid btn-pink-gradient"><span>검색하기</span></button>
+                  </li>
+                </ul>
+              </div>
+              <div id="panel02" class="box-show">
+                <ul>
+                  <li class="field-location">
+                    <div class="tit">위치</div>
+                    <label class="sub-tit blind">위치</label>
+                    <input type="text" name="location-search" placeholder="어디로 여행가세요?" class="w-full">
+                  </li>
+                  <li class="field-date flex-grp">
+                    <div class="form-grp">
+                      <div class="tit">체크인</div>
+                      <label class="sub-tit blind" for="ex-checkin">체크인</label>
+                      <input type="text" placeholder="yyyy-mm-dd" maxlength="8" name="in-date" id="ex-checkin"
+                        class="date-picker w-full" onclick="$('#ex-checkin').datepicker('show');">
+                    </div>
+                    <span>~</span>
+                    <div class="form-grp">
+                      <div class="tit">체크아웃</div>
+                      <label class="sub-tit blind" for="ex-checkout">체크아웃</label>
+                      <input type="text" placeholder="yyyy-mm-dd" maxlength="8" name="in-date" id="ex-checkout"
+                        class="date-picker w-full" onclick="$('#ex-checkout').datepicker('show');">
+                    </div>
+                  </li>
+                  <li class="field-submit-btn">
+                    <button type="submit" class="submit btn b-mid btn-pink-gradient"><span>검색하기</span></button>
+                  </li>
+                </ul>
+              </div>
+              <div id="panel03" class="box-show"></div>
+            </div>
+          </div>
+          <!-- 에어비앤비 예약 패널 : e -->
+          <!-- 이제 가까운 곳에서 소중한 것들을 찾아보세요. : s -->
+          <div class="topvis-message cont-top">
+            <h2 class="tit"><span class="gradient">이제 가까운 곳에서 소중한 것들을 찾아보세요.</span></h2>
+            <p class="desc"><b>에어비앤비</b>와 함께 잊지 못할 여행이 시작됩니다. 주변 또는 멀리 떨어진 장소에서 벌어지는 모험들을 찾아 떠나요!</p>
+          </div>
+          <!-- 이제 가까운 곳에서 소중한 것들을 찾아보세요. : e -->
+        </div>
+      </div>
+      <!-- 메인 슬라이드 배너 : e -->
+
+      <!-- 추천 리스트 : s -->
+      <div class="site-content recommend">
+        <div class="cont-wrap bg-gray">
+          <div class="ui-cont">
+            <div class="cont-top">
+              <h2 class="tit">여행을 떠나요!</h2>
+              <p class="desc"><b>에어비앤비</b>와 함께 잊지 못할 여행이 시작됩니다. 주변 또는 멀리 떨어진 장소에서 벌어지는 모험들을 찾아 떠나요!</p>
+            </div>
+            <div class="cont-inner">
+              <ul class="recommend-grp">
+                <li class="thum">
+                  <a href="javascript:void(0);">
+                    <p class="img-box">
+                      <img src="./img/main/st_thum_01.png" alt="가까운 여행지">
+                    </p>
+                    <div class="info">
+                      <h3 class="tit">가까운 여행지</h3>
+                      <p class="short-desc">
+                        자동차로 금방 다녀올 수 있는 근교 여행지에서 휴식을 즐기세요.
+                      </p>
+                    </div>
+                  </a>
+                </li>
+                <li class="thum">
+                  <a href="javascript:void(0);">
+                    <div class="img-box">
+                      <img src="./img/main/st_thum_02.png" alt="온라인체험">
+                    </div>
+                    <div class="info">
+                      <h3 class="tit">온라인 체험</h3>
+                      <p class="short-desc">
+                        세계 각지의 호스트가 진행하고 모두 함께 즐기는 독특한 액티비티
+                      </p>
+                    </div>
+                  </a>
+                </li>
+                <li class="thum">
+                  <a href="javascript:void(0);">
+                    <div class="img-box">
+                      <img src="./img/main/st_thum_03.png" alt="우리끼리">
+                    </div>
+                    <div class="info">
+                      <h3 class="tit">우리끼리</h3>
+                      <p class="short-desc">
+                        일행만을 위한 편안한 공간에서 친구 및 가족과 오붓한 시간을 보내세요.
+                      </p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 추천 리스트 : e -->
+      <!-- 요즘 뜨는 활동 : s -->
+      <div class="site-content trend">
+        <div class="cont-wrap">
+          <div class="ui-cont">
+            <div class="cont-top">
+              <h2 class="tit">최고의 셰프와 함께하는 온라인 체험</h2>
+              <p class="desc">요리계의 전설과 함께하면서 요리에 숨겨진 뒷이야기를 들어보세요. 개성 있는 호스트가 진행하는 특별한 활동에 참여하면서 이제 집에서도 안전하게 체험을 즐기실 수
+                있습니다.</p>
+            </div>
+            <div class="cont-inner">
+              <ul class="trend-grp">
+                <li class='thum'>
+                  <a href="javascript:void(0);">
+                    <div class="img-box"><img src="./img/main/tr_thum_01.png" alt=""></div>
+                    <div class="info">
+                      <p class="short-desc">
+                        유명 셰프 로제 트라오레와 함께 인기 만점의 여름 별미 만들어보기
+                      </p>
+                    </div>
+                  </a>
+                </li>
+                <li class='thum'>
+                  <a href="javascript:void(0);">
+                    <div class="img-box"><img src="./img/main/tr_thum_02.png" alt=""></div>
+                    <div class="info">
+                      <p class="short-desc">
+                        미슐랭 셰프 마크 파비에르와 함께하는 해산물 요리
+                      </p>
+                    </div>
+                  </a>
+                </li>
+                <li class='thum'>
+                  <a href="javascript:void(0);">
+                    <div class="img-box"><img src="./img/main/tr_thum_03.png" alt=""></div>
+                    <div class="info">
+                      <p class="short-desc">
+                        미슐랭 셰프 수 안과 함께하는 푸드 페어링과 플레이팅
+                      </p>
+                    </div>
+                  </a>
+                </li>
+                <li class='thum'>
+                  <a href="javascript:void(0);">
+                    <div class="img-box"><img src="./img/main/tr_thum_04.png" alt=""></div>
+                    <div class="info">
+                      <p class="short-desc">
+                        런던의 스타 셰프 안테아 스티븐슨과 함께 제철 요리 만들기
+                      </p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 요즘 뜨는 활동 : e -->
+      <!-- 코로나19 관련 프로모션 : s -->
+      <div class="site-content promotion">
+        <div class="cont-wrap bg-black">
+          <div class="ui-cont">
+            <div class="cont-inner">
+              <h3 class="tit">구호 인력 호스팅 : 세계 각지의 구호 인력에게 숙소를 제공하세요.</h3>
+              <p class="desc">코로나19와 맞서 싸우는 보건의료 인력, 긴급 구호 요원, 응급 구조 요원 등 10만 명에게 임시 숙소를 제공하는 '구호 인력을 위한 숙소' 프로그램에 에어비앤비
+                호스트 여러분의 참여를 부탁드립니다. 이는 감염 노출 위험이 있는 구호 인력에게 병원과 가까우면서도 가족과 떨어져 안전하게 머물 수 있는 숙소를 제공하기 위한 것입니다.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 코로나19 관련 프로모션 : e -->
+
+      <!-- 다음 여행 : s -->
+      <div class="site-content next-trip">
+        <div class="cont-wrap">
+          <div class="ui-cont">
+            <div class="cont-top">
+              <h2 class="tit">다음 여행은 어디로 가볼까요?</h2>
+            </div>
+            <div class="cont-inner">
+              <ul class="next-trip-grp">
+                <li class="thum">
+                  <a href="javascript:void(0);">
+                    <div class="img-box">
+                      <img src="./img/main/jeju.png" alt="제주시">
+                    </div>
+                    <div class="info">
+                      <h2 class="tit">제주시</h2>
+                      <p class="short-desc">1박당 평균 <span class="price">₩87,558</span></p>
+                    </div>
+                  </a>
+                </li>
+                <li class="thum">
+                  <a href="javascript:void(0);">
+                    <div class="img-box">
+                      <img src="./img/main/seoul.png" alt="서울특별시">
+                    </div>
+                    <div class="info">
+                      <h2 class="tit">서울특별시</h2>
+                      <p class="short-desc">1박당 평균 <span class="price">₩51,575</span></p>
+                    </div>
+                  </a>
+                </li>
+                <li class="thum">
+                  <a href="javascript:void(0);">
+                    <div class="img-box">
+                      <img src="./img/main/gwangju.png" alt="광주광역시">
+                    </div>
+                    <div class="info">
+                      <h2 class="tit">광주광역시</h2>
+                      <p class="short-desc">1박당 평균 <span class="price">₩56,373</span></p>
+                    </div>
+                  </a>
+                </li>
+                <li class="thum">
+                  <a href="javascript:void(0);">
+                    <div class="img-box">
+                      <img src="./img/main/busan.png" alt="부산광역시">
+                    </div>
+                    <div class="info">
+                      <h2 class="tit">부산광역시</h2>
+                      <p class="short-desc">1박당 평균 <span class="price">₩65,969</span></p>
+                    </div>
+                  </a>
+                </li>
+                <li class="thum">
+                  <a href="javascript:void(0);">
+                    <div class="img-box">
+                      <img src="./img/main/yeosu.png" alt="여수시">
+                    </div>
+                    <div class="info">
+                      <h2 class="tit">여수시</h2>
+                      <p class="short-desc">1박당 평균 <span class="price">₩119,943</span></p>
+                    </div>
+                  </a>
+                </li>
+                <li class="thum">
+                  <a href="javascript:void(0);">
+                    <div class="img-box">
+                      <img src="./img/main/gangneong.png" alt="강릉시">
+                    </div>
+                    <div class="info">
+                      <h2 class="tit">강릉시</h2>
+                      <p class="short-desc">1박당 평균 <span class="price">₩129,538</span></p>
+                    </div>
+                  </a>
+                </li>
+                <li class="thum">
+                  <a href="javascript:void(0);">
+                    <div class="img-box">
+                      <img src="./img/main/seokwipo.png" alt="서귀포시">
+                    </div>
+                    <div class="info">
+                      <h2 class="tit">서귀포시</h2>
+                      <p class="short-desc">1박당 평균 <span class="price">₩73,165</span></p>
+                    </div>
+                  </a>
+                </li>
+                <li class="thum">
+                  <a href="javascript:void(0);">
+                    <div class="img-box">
+                      <img src="./img/main/mokpo.png" alt="목포시">
+                    </div>
+                    <div class="info">
+                      <h2 class="tit">목포시</h2>
+                      <p class="short-desc">1박당 평균 <span class="price">₩75,564</span></p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 다음 여행 : e -->
+    </div>
+    <!-- contents : e -->
+  </section>
+  <footer>
+    <!-- scrollTop btn : s -->
+    <div class="scroll-top-wrap">
+      <div class="scroll-top-btn">
+        <a href="javascript:void(0);" onclick="scrollTopEvt();">맨 위로 가기</a>
+      </div>
+    </div>
+    <!-- scrollTop btn : e -->
+    <div class="footer-inner">
+      <div class="footer-left-area">
+        <ul class="btn-grp">
+          <li><a href="javascript:void(0);">개인정보 처리방침</a></li>
+          <li><a href="javascript:void(0);">이용약관</a></li>
+          <li><a href="javascript:void(0);">사이트맵</a></li>
+          <li><a href="javascript:void(0);">한국의 변경된 환불정책</a></li>
+        </ul>
+        <ul class="global-grp">
+          <li class="language">
+            <img src="./img/common/global_gray.png" class="icon" alt="언어선택">
+            <a href="#select-language" class="show-modal">한국어(KR)</a>
+          </li>
+          <li class="exchange">
+            <a href="#select-exchange" class="show-modal">₩(KRW)</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-right-area">
+        <div class="company-service">
+          <div class="tit">소개</div>
+          <ul class="service-grp">
+            <li><a href="javascript:void(0);">에어비앤비 이용 방법</a></li>
+            <li><a href="javascript:void(0);">다양성 및 소속감</a></li>
+            <li><a href="javascript:void(0);">접근성</a></li>
+            <li><a href="javascript:void(0);">신뢰와 안전</a></li>
+            <li><a href="javascript:void(0);">Airbnb Citizen</a></li>
+            <li><a href="javascript:void(0);">올림픽</a></li>
+            <li><a href="javascript:void(0);">뉴스룸</a></li>
+          </ul>
+        </div>
+        <div class="company-service">
+          <div class="tit">커뮤니티</div>
+          <ul class="service-grp">
+            <li><a href="javascript:void(0);">에어비앤비 매거진</a></li>
+            <li><a href="javascript:void(0);">에어비앤비 어소시에이트</a></li>
+            <li><a href="javascript:void(0);">에어비앤비 비즈니스 프로그램</a></li>
+            <li><a href="javascript:void(0);">친구 초대하기</a></li>
+            <li><a href="javascript:void(0);">채용 정보</a></li>
+          </ul>
+        </div>
+        <div class="company-service">
+          <div class="tit">호스팅하기</div>
+          <ul class="service-grp">
+            <li><a href="javascript:void(0);">숙소 호스팅</a></li>
+            <li><a href="javascript:void(0);">온라인 체험 호스팅하기</a></li>
+            <li><a href="javascript:void(0);">브라이언 체스키 CEO의 메세지</a></li>
+            <li><a href="javascript:void(0);">책임감있는 호스팅</a></li>
+            <li><a href="javascript:void(0);">Open Homes</a></li>
+            <li><a href="javascript:void(0);">자료 센터</a></li>
+            <li><a href="javascript:void(0);">커뮤니티 센터</a></li>
+          </ul>
+        </div>
+        <div class="company-service">
+          <div class="tit">에어비앤비 지원</div>
+          <ul class="service-grp">
+            <li><a href="javascript:void(0);">코로나19 관련 업데이트</a></li>
+            <li><a href="javascript:void(0);">도움말 센터</a></li>
+            <li><a href="javascript:void(0);">예약 취소 옵션</a></li>
+            <li><a href="javascript:void(0);">에어비앤비 이웃 민원 지원</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom-area">
+      <div class="footer-inner">
+        <p class="copy">© 2020 Airbnb, Inc. All rights reserved</p>
+        <ul class="sns-grp">
+          <li>
+            <a href="https://www.facebook.com/AirbnbKorea" target="_blank">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/airbnb" target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/airbnb/" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://blog.naver.com/airbnbkr" target="_blank">
+              <i class="fab fa-blogger-b"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://post.naver.com/airbnb_kr" target="_blank">
+              <i class="fas fa-pencil-alt"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <!-- default.js -->
+  <script src="./js/default.js"></script>
+  <!-- bxSlider -->
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+</body>
+
+</html>
