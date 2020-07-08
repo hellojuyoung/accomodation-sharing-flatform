@@ -488,15 +488,15 @@
           </div>
           <div class="cont-inner">
             <div class="login-form">
-              <form action="">
+              <form action="/" method="POST">
                 <input type="text" placeholder="아이디를 입력해주세요." class="w-full">
                 <input type="password" placeholder="비밀번호를 입력해주세요." class="w-full">
                 <div class="checkbox-save">
                   <label for="password-save" class="label-checkbox">비밀번호 저장</label>
                   <input type="checkbox" id="password-save" name="password-save" class="checkbox-save">
                   <div class="login-search">
-                    <a href="javascript:void(0)" class="link">아이디 찾기</a>
-                    <a href="javascript:void(0)" class="link">비밀번호 찾기</a>
+                    <a href="javascript:void(0)">아이디 찾기</a>
+                    <a href="javascript:void(0)">비밀번호 찾기</a>
                   </div>
                 </div>
                 <button type="submit" class="submit btn b-mid btn-pink-gradient w-full"><span>로그인</span></button>
@@ -569,14 +569,16 @@
                     <div class="form-grp">
                       <div class="tit">체크인</div>
                       <label class="sub-tit blind" for="checkin">체크인</label>
-                      <input type="text" placeholder="yyyy-mm-dd" maxlength="8" name="in-date" id="checkin"
+                      <input type="text" placeholder="yyyy-mm-dd" onkeyup="dateHyphen(event, this)"
+                        onkeypress="dateHyphen(event, this)" maxlength="10" name="in-date" id="checkin"
                         class="date-picker w-full" onclick="$('#checkin').datepicker('show');">
                     </div>
                     <span>~</span>
                     <div class="form-grp">
                       <div class="tit">체크아웃</div>
                       <label class="sub-tit blind" for="checkout">체크아웃</label>
-                      <input type="text" placeholder="yyyy-mm-dd" maxlength="8" name="in-date" id="checkout"
+                      <input type="text" placeholder="yyyy-mm-dd" onkeyup="dateHyphen(event, this)"
+                        onkeypress="dateHyphen(event, this)" maxlength="10" name="in-date" id="checkout"
                         class="date-picker w-full" onclick="$('#checkout').datepicker('show');">
                     </div>
                   </li>

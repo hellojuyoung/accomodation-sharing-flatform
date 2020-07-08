@@ -119,19 +119,19 @@ function tabClickEvt() {
     });
 }
 //modal content box 가운데 정렬
-function modalAlignCenter() {
-    //var thisCont = $('.modal').find(modalContId).find('.modal-cont');
+//function modalAlignCenter() {
+//    var thisCont = $('.modal').find(modalContId).find('.modal-cont');
 
-    //var contW = thisCont.width() + 180;
-    //var contH = thisCont.height();
+//    var contW = thisCont.width() + 180;
+//    var contH = thisCont.height();
 
-    //console.log(contW);
+//    console.log(contW);
 
-    //thisCont.css({
-    //    'marginLeft': '-' + contW / 2 + 'px',
-    //    'marginTop': '-' + contH / 2 + 'px'
-    //});
-}
+//    thisCont.css({
+//        'marginLeft': '-' + contW / 2 + 'px',
+//        'marginTop': '-' + contH / 2 + 'px'
+//    });
+//}
 
 
 //modal show & hide
@@ -163,6 +163,28 @@ function checkBox() {
 }
 
 
+//체크인, 체크아웃 value 하이픈 자동 추가
+function dateHyphen(e, selected) {
+
+    var num_arr = [
+        97, 98, 99, 100, 101, 102, 103, 104, 105, 96,
+        48, 49, 50, 51, 52, 53, 54, 55, 56, 57
+    ]
+
+    var enterDate = (e.which) ? e.which : e.enterDate;
+    if (num_arr.indexOf(Number(enterDate)) != -1) {
+
+        var len = selected.value.length;
+        if (len == 4) selected.value += "-";
+        if (len == 7) selected.value += "-";
+
+    }
+
+}
+
+
+
+
 
 
 
@@ -170,7 +192,7 @@ $(document).ready(function () {
     mainScrollEvt();
     guestCountLimit();
     tabClickEvt();
-    modalAlignCenter();
+    //modalAlignCenter();
     modalControl();
     checkBox();
 });
