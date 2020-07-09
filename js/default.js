@@ -70,10 +70,12 @@ function mainScrollEvt() {
             $('header').addClass('scroll');
             $('nav li.icon').addClass('on');
             $('.scroll-top-wrap').addClass('scroll');
+            $('.header-bottom-area').show();
         } else {
             $('header').removeClass('scroll');
             $('nav li.icon').removeClass('on');
             $('.scroll-top-wrap').removeClass('scroll');
+            $('.header-bottom-area').css('top', -200).removeClass('on').hide();
         }
     });
 
@@ -86,6 +88,29 @@ function scrollTopEvt() {
     }, 300);
     //alert('wrk');
 }
+
+//gnb 숙소검색 show
+function showGnbSearch() {
+    $('.icon.gnb-search').click(function () {
+
+        var findSearchBox = $('.header-bottom-area.booking-box');
+        var getHeaderH = $('.ui-header').height() - 5;
+
+        if ($(findSearchBox).hasClass('on')) {
+            $(findSearchBox).css({
+                top: -200
+            });
+            $(findSearchBox).removeClass('on');
+        } else {
+            $(findSearchBox).css({
+                top: getHeaderH + 'px'
+            });
+            $(findSearchBox).addClass('on');
+        }
+    });
+}
+
+
 
 //예약 가능 인원 제한
 function guestCountLimit() {
@@ -118,39 +143,39 @@ function tabClickEvt() {
         }
     });
 }
-//modal content box 가운데 정렬
-//function modalAlignCenter() {
-//    var thisCont = $('.modal').find(modalContId).find('.modal-cont');
-
-//    var contW = thisCont.width() + 180;
-//    var contH = thisCont.height();
-
-//    console.log(contW);
-
-//    thisCont.css({
-//        'marginLeft': '-' + contW / 2 + 'px',
-//        'marginTop': '-' + contH / 2 + 'px'
-//    });
-//}
-
 
 //modal show & hide
-function modalControl() {
-    $('.show-modal').click(function (e) {
+function controlModal() {
+    $('.show-modal').click(function () {
 
         var modalContId = $(this).attr('href');
 
         $('.modal').addClass('on');
         $('.modal').find(modalContId).addClass('show').siblings('.modal-box').removeClass('show');
 
+        //modal content box 가운데 정렬
+        var findCont = $(modalContId).children('.modal-cont');
+        var contW = findCont.width();
+        var contH = findCont.height();
+
+        //console.log(contW);
+
+        $(findCont).css({
+            'marginLeft': '-' + contW / 2 + 'px',
+            'marginTop': '-' + contH / 2 + 'px'
+        });
+
+
     });
 
     $('.modal>.dimmed, .modal .close > img').click(function (e) {
         $('.modal').removeClass('on');
+
         e.preventDefault();
     });
 }
 
+//checkbox label click evt
 function checkBox() {
     $('.label-checkbox').click(function () {
 
@@ -166,12 +191,10 @@ function checkBox() {
 //체크인, 체크아웃 value 하이픈 자동 추가
 function dateHyphen(e, selected) {
 
-    var num_arr = [
-        97, 98, 99, 100, 101, 102, 103, 104, 105, 96,
-        48, 49, 50, 51, 52, 53, 54, 55, 56, 57
-    ]
+    var num_arr = [96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57]
 
     var enterDate = (e.which) ? e.which : e.enterDate;
+
     if (num_arr.indexOf(Number(enterDate)) != -1) {
 
         var len = selected.value.length;
@@ -190,9 +213,9 @@ function dateHyphen(e, selected) {
 
 $(document).ready(function () {
     mainScrollEvt();
+    showGnbSearch();
     guestCountLimit();
     tabClickEvt();
-    //modalAlignCenter();
-    modalControl();
+    controlModal();
     checkBox();
 });

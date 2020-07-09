@@ -68,19 +68,13 @@
           </h1>
           <nav>
             <ul class="nav-grp">
-              <li><a href="#">숙소 호스트 되기</a></li>
-              <li><a href="#">체험 호스팅 하기</a></li>
+              <li><a href="#">숙소 호스트 되기</a></li>
+              <li><a href="#">체험 호스팅 하기</a></li>
               <li><a href="#">도움말</a></li>
             </ul>
             <ul class="nav-aside">
               <li class="icon gnb-search on">
-                <a href="#" class="blind search-icon">search</a>
-                <div style="display:none;">
-                  <form action="#" onsubmit="" class="search-area">
-                    <input type="text" id="search" class="gnb-input" value="에어비앤비와 함께 떠나요.">
-                    <input type="image" src="" class="search_btn">
-                  </form>
-                </div>
+                <a href="javascript:void(0)" class="blind search-icon">search</a>
               </li>
               <li class="icon gnb-mypage on">
                 <a href="javascript:void(0)" onclick="alert('로그인 후 이용해주세요.');" class="blind mypage-icon">mypage</a>
@@ -90,13 +84,120 @@
         </div>
       </div>
     </div>
+    <!-- header 에어비앤비 예약 패널 : s -->
+    <div class="header-bottom-area booking-box">
+      <div class="ui-cont">
+        <div class="cont-tabs">
+          <ul class="tabs">
+            <li class="on"><a href="#panel01">숙소</a></li>
+            <li><a href="#panel02">체험</a></li>
+            <li class="no-tab-cont"><a href="javascript:void(0)" class="badge-new">온라인 체험</a></li>
+          </ul>
+        </div>
+        <div class="tab-cont panel-cont">
+          <div id="panel01" class="box-show on">
+            <form action="/" id="booking-hotel-01">
+              <ul>
+                <li class="field-location">
+                  <div class="tit">위치</div>
+                  <label class="sub-tit blind">위치</label>
+                  <input type="text" name="location-search" placeholder="어디로 여행가세요?" class="w-full">
+                </li>
+                <li class="field-date flex-grp">
+                  <div class="form-grp">
+                    <div class="tit">체크인</div>
+                    <label class="sub-tit blind" for="checkin">체크인</label>
+                    <input type="text" placeholder="yyyy-mm-dd" onkeyup="dateHyphen(event, this)"
+                      onkeypress="dateHyphen(event, this)" maxlength="10" name="in-date" id="hotel-checkin-01"
+                      class="date-picker w-full " onclick="$('#hotel-checkin').datepicker('show');">
+                  </div>
+                  <span>~</span>
+                  <div class="form-grp">
+                    <div class="tit">체크아웃</div>
+                    <label class="sub-tit blind" for="checkout">체크아웃</label>
+                    <input type="text" placeholder="yyyy-mm-dd" onkeyup="dateHyphen(event, this)"
+                      onkeypress="dateHyphen(event, this)" maxlength="10" name="out-date" id="hotel-checkout"
+                      class="date-picker w-full" onclick="$('#hotel-checkout-01').datepicker('show');">
+                  </div>
+                </li>
+                <li class="field-count-guest">
+                  <div class="tit">인원</div>
+                  <div class="flex-grp">
+                    <div class="count-wrap adult">
+                      <label class="sub-tit" for="count-adult">성인</label>
+                      <div class="count">
+                        <input type="button" class="btn down" onclick="javascript:this.form.adult.value--;">
+                        <input type="text" readonly="readonly" placeholder="0" id="count-adult" class="count-num"
+                          name="adult">
+                        <input type="button" class="btn up" onclick="javascript:this.form.adult.value++;">
+                      </div>
+                    </div>
+                    <div class="count-wrap kid">
+                      <label class="sub-tit" for="count-kid">어린이</label>
+                      <div class="count">
+                        <form action="">
+                          <input type="button" class="btn down" onclick="javascript:this.form.kid.value--;">
+                          <input type="text" readonly="readonly" placeholder="0" id="count-kid" class="count-num"
+                            name="kid">
+                          <input type="button" class="btn up" onclick="javascript:this.form.kid.value++;">
+                      </div>
+                    </div>
+                    <div class="count-wrap toddler">
+                      <label class="sub-tit" for="count-toddler">유아</label>
+                      <div class="count">
+                        <input type="button" class="btn down" onclick="javascript:this.form.toddler.value--;">
+                        <input type="text" readonly="readonly" placeholder="0" placeholder="0" id="count-toddler"
+                          class="count-num" name="toddler">
+                        <input type="button" class="btn up" onclick="javascript:this.form.toddler.value++;">
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <button type="submit" for="booking-hotel-01"
+                class="submit btn b-mid btn-pink-gradient"><span>검색하기</span></button>
+            </form>
+
+          </div>
+          <div id="panel02" class="box-show">
+            <form action="/" id="booking-experience-01">
+              <ul>
+                <li class="field-location">
+                  <div class="tit">위치</div>
+                  <label class="sub-tit blind">위치</label>
+                  <input type="text" name="location-search" placeholder="어디로 여행가세요?" class="w-full">
+                </li>
+                <li class="field-date flex-grp">
+                  <div class="form-grp">
+                    <div class="tit">체크인</div>
+                    <label class="sub-tit blind" for="ex-checkin">체크인</label>
+                    <input type="text" placeholder="yyyy-mm-dd" maxlength="8" name="in-date" id="exp-checkin-01"
+                      class="date-picker w-full" onclick="$('#exp-checkin-01').datepicker('show');">
+                  </div>
+                  <span>~</span>
+                  <div class="form-grp">
+                    <div class="tit">체크아웃</div>
+                    <label class="sub-tit blind" for="ex-checkout">체크아웃</label>
+                    <input type="text" placeholder="yyyy-mm-dd" maxlength="8" name="out-date" id="exp-checkout-01"
+                      class="date-picker w-full" onclick="$('#exp-checkout-01').datepicker('show');">
+                  </div>
+                </li>
+              </ul>
+              <button type="submit" for="booking-experience-01"
+                class="submit btn b-mid btn-pink-gradient"><span>검색하기</span></button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- header 에어비앤비 예약 패널 : e -->
   </header>
 
   <!-- modal : s -->
   <div class="modal">
     <!-- 언어 : s -->
     <div id="select-language" class="modal-box">
-      <div class="modal-cont">
+      <div class="modal-cont" style="width:100%">
         <div class="close"><img src="./img/common/close_btn_gray_15x15.png" alt="닫기"></div>
         <div class="cont-wrap">
           <div class="cont-top">
@@ -224,7 +325,7 @@
     <!-- 언어 : e -->
     <!-- 통화 : s -->
     <div id="select-exchange" class="modal-box">
-      <div class="modal-cont">
+      <div class="modal-cont" style="width:100%">
         <div class="close"><img src="./img/common/close_btn_gray_15x15.png" alt="닫기"></div>
         <div class="cont-wrap">
           <div class="cont-top">
@@ -549,7 +650,7 @@
 
         <div class="ui-cont">
           <!-- 에어비앤비 예약 패널 : s -->
-          <div class="topvis-right-area">
+          <div class="topvis-right-area booking-box">
             <div class="cont-tabs">
               <ul class="tabs">
                 <li class="on"><a href="#panel01">숙소</a></li>
@@ -559,98 +660,92 @@
             </div>
             <div class="tab-cont panel-cont">
               <div id="panel01" class="box-show on">
-                <ul>
-                  <li class="field-location">
-                    <div class="tit">위치</div>
-                    <label class="sub-tit blind">위치</label>
-                    <input type="text" name="location-search" placeholder="어디로 여행가세요?" class="w-full">
-                  </li>
-                  <li class="field-date flex-grp">
-                    <div class="form-grp">
-                      <div class="tit">체크인</div>
-                      <label class="sub-tit blind" for="checkin">체크인</label>
-                      <input type="text" placeholder="yyyy-mm-dd" onkeyup="dateHyphen(event, this)"
-                        onkeypress="dateHyphen(event, this)" maxlength="10" name="in-date" id="checkin"
-                        class="date-picker w-full" onclick="$('#checkin').datepicker('show');">
-                    </div>
-                    <span>~</span>
-                    <div class="form-grp">
-                      <div class="tit">체크아웃</div>
-                      <label class="sub-tit blind" for="checkout">체크아웃</label>
-                      <input type="text" placeholder="yyyy-mm-dd" onkeyup="dateHyphen(event, this)"
-                        onkeypress="dateHyphen(event, this)" maxlength="10" name="in-date" id="checkout"
-                        class="date-picker w-full" onclick="$('#checkout').datepicker('show');">
-                    </div>
-                  </li>
-                  <li class="field-count-guest">
-                    <div class="tit">인원</div>
-                    <div class="flex-grp">
-                      <div class="count-wrap adult">
-                        <label class="sub-tit" for="count-adult">성인</label>
-                        <div class="count">
-                          <form action="">
+                <form action="" id="booking-hotel-02">
+                  <ul>
+                    <li class="field-location">
+                      <div class="tit">위치</div>
+                      <label class="sub-tit blind">위치</label>
+                      <input type="text" name="location-search" placeholder="어디로 여행가세요?" class="w-full">
+                    </li>
+                    <li class="field-date flex-grp">
+                      <div class="form-grp">
+                        <div class="tit">체크인</div>
+                        <label class="sub-tit blind" for="checkin">체크인</label>
+                        <input type="text" placeholder="yyyy-mm-dd" onkeyup="dateHyphen(event, this)"
+                          onkeypress="dateHyphen(event, this)" maxlength="10" name="in-date" id="hotel-checkin-02"
+                          class="date-picker w-full" onclick="$('#hotel-checkin-02').datepicker('show');">
+                      </div>
+                      <span>~</span>
+                      <div class="form-grp">
+                        <div class="tit">체크아웃</div>
+                        <label class="sub-tit blind" for="checkout">체크아웃</label>
+                        <input type="text" placeholder="yyyy-mm-dd" onkeyup="dateHyphen(event, this)"
+                          onkeypress="dateHyphen(event, this)" maxlength="10" name="out-date" id="hotel-checkout-02"
+                          class="date-picker w-full" onclick="$('#hotel-checkout-02').datepicker('show');">
+                      </div>
+                    </li>
+                    <li class="field-count-guest">
+                      <div class="tit">인원</div>
+                      <div class="flex-grp">
+                        <div class="count-wrap adult">
+                          <label class="sub-tit" for="count-adult">성인</label>
+                          <div class="count">
                             <input type="button" class="btn down" onclick="javascript:this.form.adult.value--;">
                             <input type="text" readonly="readonly" placeholder="0" id="count-adult" class="count-num"
                               name="adult">
                             <input type="button" class="btn up" onclick="javascript:this.form.adult.value++;">
-                          </form>
+                          </div>
                         </div>
-                      </div>
-                      <div class="count-wrap kid">
-                        <label class="sub-tit" for="count-kid">어린이</label>
-                        <div class="count">
-                          <form action="">
+                        <div class="count-wrap kid">
+                          <label class="sub-tit" for="count-kid">어린이</label>
+                          <div class="count">
                             <input type="button" class="btn down" onclick="javascript:this.form.kid.value--;">
                             <input type="text" readonly="readonly" placeholder="0" id="count-kid" class="count-num"
                               name="kid">
                             <input type="button" class="btn up" onclick="javascript:this.form.kid.value++;">
-                          </form>
+                          </div>
                         </div>
-                      </div>
-                      <div class="count-wrap toddler">
-                        <label class="sub-tit" for="count-toddler">유아</label>
-                        <div class="count">
-                          <form action="">
+                        <div class="count-wrap toddler">
+                          <label class="sub-tit" for="count-toddler">유아</label>
+                          <div class="count">
                             <input type="button" class="btn down" onclick="javascript:this.form.toddler.value--;">
                             <input type="text" readonly="readonly" placeholder="0" placeholder="0" id="count-toddler"
                               class="count-num" name="toddler">
                             <input type="button" class="btn up" onclick="javascript:this.form.toddler.value++;">
-                          </form>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </li>
-                  <li class="field-submit-btn">
-                    <button type="submit" class="submit btn b-mid btn-pink-gradient"><span>검색하기</span></button>
-                  </li>
-                </ul>
+                    </li>
+                  </ul>
+                  <button type="submit" class="submit btn b-mid btn-pink-gradient"><span>검색하기</span></button>
+                </form>
               </div>
               <div id="panel02" class="box-show">
-                <ul>
-                  <li class="field-location">
-                    <div class="tit">위치</div>
-                    <label class="sub-tit blind">위치</label>
-                    <input type="text" name="location-search" placeholder="어디로 여행가세요?" class="w-full">
-                  </li>
-                  <li class="field-date flex-grp">
-                    <div class="form-grp">
-                      <div class="tit">체크인</div>
-                      <label class="sub-tit blind" for="ex-checkin">체크인</label>
-                      <input type="text" placeholder="yyyy-mm-dd" maxlength="8" name="in-date" id="ex-checkin"
-                        class="date-picker w-full" onclick="$('#ex-checkin').datepicker('show');">
-                    </div>
-                    <span>~</span>
-                    <div class="form-grp">
-                      <div class="tit">체크아웃</div>
-                      <label class="sub-tit blind" for="ex-checkout">체크아웃</label>
-                      <input type="text" placeholder="yyyy-mm-dd" maxlength="8" name="in-date" id="ex-checkout"
-                        class="date-picker w-full" onclick="$('#ex-checkout').datepicker('show');">
-                    </div>
-                  </li>
-                  <li class="field-submit-btn">
-                    <button type="submit" class="submit btn b-mid btn-pink-gradient"><span>검색하기</span></button>
-                  </li>
-                </ul>
+                <form action="/" id="booking-experience-02">
+                  <ul>
+                    <li class="field-location">
+                      <div class="tit">위치</div>
+                      <label class="sub-tit blind">위치</label>
+                      <input type="text" name="location-search" placeholder="어디로 여행가세요?" class="w-full">
+                    </li>
+                    <li class="field-date flex-grp">
+                      <div class="form-grp">
+                        <div class="tit">체크인</div>
+                        <label class="sub-tit blind" for="ex-checkin">체크인</label>
+                        <input type="text" placeholder="yyyy-mm-dd" maxlength="8" name="in-date" id="exp-checkin-02"
+                          class="date-picker w-full" onclick="$('#exp-checkin-02').datepicker('show');">
+                      </div>
+                      <span>~</span>
+                      <div class="form-grp">
+                        <div class="tit">체크아웃</div>
+                        <label class="sub-tit blind" for="ex-checkout">체크아웃</label>
+                        <input type="text" placeholder="yyyy-mm-dd" maxlength="8" name="out-date" id="exp-checkout-02"
+                          class="date-picker w-full" onclick="$('#exp-checkout-02').datepicker('show');">
+                      </div>
+                    </li>
+                  </ul>
+                  <button type="submit" class="submit btn b-mid btn-pink-gradient"><span>검색하기</span></button>
+                </form>
               </div>
               <div id="panel03" class="box-show"></div>
             </div>
