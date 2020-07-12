@@ -799,3 +799,9 @@ footer {
 .footer-bottom-area .sns-grp li i {
   color: #686868;
 }
+
+
+/* shortcut-fix-menu */
+.shortcut-fix-menu {
+  display: none;
+}

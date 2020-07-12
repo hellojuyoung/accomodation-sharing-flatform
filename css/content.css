@@ -404,6 +404,7 @@
     z-index: 997;
     transition: .7s;
     top: -300px;
+    overflow: hidden;
 }
 
 .top-search-area .booking-box .cont-top {

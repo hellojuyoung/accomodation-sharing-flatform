@@ -1,5 +1,6 @@
 input {
     height: 40px;
+    line-height: 40px;
 }
 
 .ui-datepicker-trigger {
@@ -222,7 +223,7 @@ nav .nav-grp {
 }
 
 .footer-right-area .company-service .tit {
-    font-size: .5rem;
+    font-size: .8rem;
 }
 
 .footer-right-area .company-service:after {
