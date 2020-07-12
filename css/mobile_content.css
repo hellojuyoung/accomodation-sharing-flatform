@@ -1,0 +1,461 @@
+.top-search-area {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+    z-index: 997;
+}
+
+.top-search-area.on {
+    display: block;
+    animation: unset;
+}
+
+.top-search-area .close {
+    display: block;
+    height: 50px;
+    padding: 0;
+}
+
+.close>img {
+    right: 4%;
+}
+
+.top-search-area .booking-box {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .3);
+    width: 90%;
+    max-height: 80%;
+    top: 50%;
+    overflow: hidden;
+    margin: -250px 5% 0;
+    z-index: 1001;
+    animation: toastModal 0.7s ease;
+}
+
+.top-search-area .booking-box .ui-cont {
+    padding: 0;
+}
+
+.top-search-area .booking-box .cont-top {
+    display: block;
+    padding: 0 3% 15px;
+}
+
+.top-search-area .booking-box .cont-tabs .tabs {
+    display: flex;
+    height: 35px;
+    flex-direction: row;
+    margin: 0 3%;
+    border-bottom: 1px solid #b3b3b3;
+}
+
+.top-search-area .booking-box .cont-tabs .tabs li {
+    width: 33.3%;
+    height: 35px;
+    line-height: 35px;
+    font-size: .8rem;
+}
+
+.top-search-area .booking-box .panel-cont {
+    width: 100%;
+    min-height: 300px;
+    padding: 3%;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.top-search-area .booking-box .panel-cont .box-show {
+    display: none;
+}
+
+.top-search-area .booking-box .panel-cont .box-show.on {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.top-search-area .panel-cont .box-show ul {
+    display: block;
+    width: 100%;
+}
+
+.top-search-area .panel-cont .box-show ul li {
+    margin-bottom: 10px;
+    margin-right: 0;
+}
+
+.top-search-area .panel-cont .box-show ul li .tit {
+    margin-bottom: 0;
+    font-size: .8rem;
+}
+
+
+.top-search-area .field-count-guest .count-wrap .btn.up {
+    right: 15px;
+}
+
+.top-search-area .field-count-guest .count-wrap .btn.down {
+    left: 15px;
+}
+
+.panel-cont .box-show .sub-tit {
+    margin-bottom: 5px;
+}
+
+.panel-cont .box-show .field-date>span {
+    margin-top: 9%;
+}
+
+.field-count-guest .count-wrap .count {
+    height: 40px;
+    line-height: 40px;
+}
+
+.top-search-area .field-count-guest .count-wrap .btn.down {
+    left: 10px;
+}
+
+.top-search-area .field-count-guest .count-wrap .btn.up {
+    right: 10px;
+}
+
+.topvis-message.cont-top {
+    width: 94%;
+    padding: 20px 5% 0;
+    margin: 0 3%;
+    top: -3vh;
+    box-sizing: border-box;
+}
+
+.topvis-message.cont-top .desc {
+    font-size: .8rem;
+    line-height: 1rem;
+    color: #222;
+}
+
+.topvis-banner-wrap {
+    height: 110vw;
+}
+
+.topvis-banner-wrap .topvis-banner .banner {
+    height: 110vw;
+}
+
+.topvis-banner-wrap .topvis-banner .banner img {
+    width: auto;
+    height: 100%;
+    left: -33%;
+    margin-left: 0;
+}
+
+.banner .banner-introduce {
+    width: 80%;
+    margin: 0;
+    top: 30vw;
+    left: 6%;
+    padding: 0;
+}
+
+.banner-introduce .tag {
+    height: 25px;
+    line-height: 25px;
+    font-size: .8rem;
+    padding: 0 7px;
+    margin-bottom: 10px;
+}
+
+.banner-introduce .tit {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.banner-introduce .explain {
+    margin-top: 5vw;
+    font-size: .8rem;
+    line-height: 1.3rem;
+}
+
+
+/* topvisual */
+.topvis-message.cont-top .tit {
+    font-size: 1rem;
+}
+
+.topvis-right-area {
+    display: none;
+    /*position: relative;
+    width: 100%;
+    top: 15px;
+    right: 0;*/
+}
+
+/* bx-slider */
+.topvis-banner-wrap .bx-wrapper .bx-controls-auto {
+    display: none;
+}
+
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
+    display: block;
+}
+
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
+    display: block;
+    position: absolute;
+    width: 48px;
+    height: 23px;
+    right: 3%;
+    bottom: 7%;
+    padding: 0;
+    font-size: .8rem;
+    text-align: center;
+    line-height: 23px;
+    border-radius: 12.5px;
+    color: #222;
+    background-color: rgba(225, 225, 225, .8);
+}
+
+
+
+
+/* contents top */
+.cont-top .tit {
+    font-size: 1rem;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.cont-top .desc {
+    width: 100%;
+    font-size: .8rem;
+    line-height: 1rem;
+    padding-bottom: 10px;
+    color: #888;
+}
+
+/* contents wrap */
+.cont-wrap {
+    padding: 30px 0;
+}
+
+.cont-wrap .thum .info * {
+    padding: 1vw;
+}
+
+.cont-wrap .thum .info>.tit {
+    font-size: .8rem;
+    padding: 7px 10px;
+    border-bottom: 0;
+}
+
+.cont-wrap .thum .info>.short-desc {
+    font-size: .5rem;
+    line-height: .8rem;
+    padding: 7px 10px;
+}
+
+
+/* 여행을 떠나요! */
+.recommend {
+    margin-top: 20vw;
+}
+
+.recommend .cont-wrap .cont-inner {
+    overflow-x: scroll;
+}
+
+.recommend .cont-wrap .recommend-grp {
+    width: 170%;
+    padding-right: 5px;
+}
+
+.recommend .cont-wrap .recommend-grp .thum {
+    width: 50vw;
+    height: 38vw;
+    margin-right: 7px;
+}
+
+.recommend .cont-wrap .recommend-grp .thum:last-child {
+    margin-right: 0;
+}
+
+.recommend .cont-wrap .thum .img-box {
+    height: auto;
+}
+
+.recommend .cont-wrap .thum .info .short-desc {
+    display: none;
+}
+
+@media all and (max-width:374px) {
+    .recommend {
+        margin-top: 15vw;
+    }
+}
+
+
+/* 온라인 체험 */
+.trend .cont-inner .trend-grp {
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.trend .cont-inner .trend-grp .thum {
+    height: 25vw;
+}
+
+.trend .cont-inner .trend-grp .thum:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 2;
+    height: auto;
+    padding-bottom: 5px;
+}
+
+.trend .cont-inner .trend-grp .thum:nth-child(2) {
+    grid-column: unset;
+    grid-row: unset;
+    height: auto;
+    padding: 0 2.5px 5px 0;
+}
+
+.trend .cont-inner .trend-grp .thum:nth-child(3) {
+    grid-column: 2/3;
+    grid-row: unset;
+    height: auto;
+    padding: 0 0 5px 2.5px;
+}
+
+.trend .cont-inner .trend-grp .thum:nth-child(4) {
+    grid-column: span 2;
+    padding: 0;
+    height: 100%;
+}
+
+.trend .cont-wrap .thum:first-child .info>.short-desc,
+.trend .cont-wrap .thum:last-child .info>.short-desc {
+    width: 70%;
+    padding: 7px 10px;
+}
+
+
+/* 프로모션 배너 */
+.promotion {
+    margin-bottom: 10px;
+}
+
+.promotion .bg-black .cont-inner {
+    padding: 4vw 5%;
+}
+
+.promotion .bg-black .tit {
+    width: 80%;
+    font-size: 1rem;
+    line-height: 1.4rem;
+    margin-bottom: 7px;
+}
+
+.promotion .bg-black .desc {
+    width: 100%;
+    font-size: .5rem;
+    line-height: 1rem;
+}
+
+
+
+/* 다음 여행지 */
+.next-trip .cont-inner .next-trip-grp .thum {
+    width: 49%;
+    height: 12.5vw;
+    margin-right: 2%;
+}
+
+.next-trip .cont-inner .next-trip-grp .thum:nth-child(2n) {
+    margin-right: 0;
+}
+
+.next-trip .cont-wrap .next-trip-grp .thum .info>.short-desc {
+    display: none;
+}
+
+.next-trip .cont-wrap .thum .info>.tit {
+    line-height: 8vw;
+}
+
+
+/* shortcut-fix-menu */
+.shortcut-fix-menu {
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    bottom: -60px;
+    padding: 2.5% 3%;
+    background: #fff;
+    box-shadow: 0 -3px 3px rgba(0, 0, 0, .1);
+    box-sizing: border-box;
+    transition: .5s;
+}
+
+.shortcut-fix-menu.scroll {
+    bottom: 0;
+}
+
+.shortcut-fix-menu ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.shortcut-fix-menu ul li {
+    position: relative;
+    width: 17%;
+}
+
+.shortcut-fix-menu ul li a {
+    position: absolute;
+    display: block;
+    width: 100%;
+    bottom: 0;
+    font-size: .6rem;
+    text-align: center;
+    color: #888;
+}
+
+.shortcut-fix-menu ul li a:before {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 23px;
+    height: 23px;
+    top: -30px;
+    left: 50%;
+    margin-left: -11.5px;
+    background-repeat: no-repeat;
+    background-position: 0;
+    background-size: contain;
+}
+
+.shortcut-fix-menu ul .shortcut-hotel a:before {
+    background-image: url(../img/common/shortcut_hotel_gray.png);
+}
+
+.shortcut-fix-menu ul .shortcut-zzim a:before {
+    background-image: url(../img/common/shortcut_zzim_gray.png);
+}
+
+.shortcut-fix-menu ul .shortcut-home a:before {
+    background-image: url(../img/common/shortcut_home_gray.png);
+}
+
+.shortcut-fix-menu ul .shortcut-search a:before {
+    background-image: url(../img/common/shortcut_searh_gray.png);
+}
+
+.shortcut-fix-menu ul .shortcut-join a:before {
+    background-image: url(../img/common/shortcut_join_gray.png);
+}

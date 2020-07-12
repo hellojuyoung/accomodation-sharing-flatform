@@ -1,0 +1,243 @@
+.top-search-area {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+    z-index: 997;
+}
+
+.top-search-area.on {
+    display: block;
+    animation: unset;
+}
+
+.top-search-area .close {
+    display: block;
+}
+
+.top-search-area .booking-box {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .3);
+    width: 90%;
+    top: 50%;
+    margin: -250px 5% 0;
+    z-index: 1001;
+    animation: toastModal 0.7s ease;
+}
+
+.top-search-area .booking-box .ui-cont {
+    padding: 0;
+}
+
+.top-search-area .booking-box .cont-top {
+    display: block;
+    padding: 0 3% 15px;
+}
+
+.top-search-area .booking-box .cont-tabs .tabs {
+    display: flex;
+    flex-direction: row;
+    margin: 0 3%;
+    border-bottom: 1px solid #b3b3b3;
+}
+
+.top-search-area .booking-box .cont-tabs .tabs li {
+    width: 33.3%;
+}
+
+
+.top-search-area .booking-box .panel-cont {
+    width: 100%;
+    height: 450px;
+    padding: 30px;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.top-search-area .booking-box .panel-cont .box-show {
+    display: none;
+}
+
+.top-search-area .booking-box .panel-cont .box-show.on {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    /*background: yellow;*/
+}
+
+.top-search-area .panel-cont .box-show ul {
+    display: block;
+    width: 100%;
+}
+
+.top-search-area .panel-cont .box-show ul li {
+    margin-bottom: 15px;
+    margin-right: 0;
+}
+
+.top-search-area .field-count-guest .count-wrap .btn.up {
+    right: 15px;
+}
+
+.top-search-area .field-count-guest .count-wrap .btn.down {
+    left: 15px;
+}
+
+
+.topvis-message.cont-top {
+    width: 94%;
+    padding: 30px 5% 0;
+    margin: 0 3%;
+    top: -5vw;
+    box-sizing: border-box;
+}
+
+.topvis-message.cont-top .desc {
+    font-size: 1.5vw;
+    line-height: 2vw;
+    color: #222;
+}
+
+.topvis-banner-wrap .topvis-banner .banner img {
+    width: auto;
+    height: 100%;
+}
+
+.banner .banner-introduce {
+    width: 70%;
+    margin: 0;
+    left: 3%;
+}
+
+
+
+.topvis-right-area {
+    display: none;
+    /*position: relative;
+    width: 100%;
+    top: 15px;
+    right: 0;*/
+}
+
+/* bx-slider */
+.topvis-banner-wrap .bx-wrapper .bx-controls-auto {
+    display: none;
+}
+
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
+    display: block;
+}
+
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
+    display: block;
+    position: absolute;
+    width: 50px;
+    height: 25px;
+    right: 3%;
+    bottom: 6.5vw;
+    padding: 0;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 12.5px;
+    color: #222;
+    background-color: rgba(225, 225, 225, .8);
+}
+
+
+
+
+/* contents top */
+.cont-top .tit {
+    padding-bottom: 2vw;
+    margin-bottom: 2vw;
+}
+
+.cont-top .desc {
+    width: 80%;
+    font-size: 1.5vw;
+    line-height: 2vw;
+    padding-bottom: 2vw;
+    color: #888;
+}
+
+/* contents wrap */
+.cont-wrap {
+    padding: 30px 0;
+}
+
+.cont-wrap .thum .info * {
+    padding: 7px 10px;
+}
+
+.cont-wrap .thum .info>.tit {
+    height: 2.3vw;
+    font-size: 1.8vw;
+    line-height: 2.3vw;
+}
+
+.cont-wrap .thum .info>.short-desc {
+    font-size: 1.5vw;
+    line-height: 2vw;
+    padding: 7px 10px;
+}
+
+
+/* 여행을 떠나요! */
+.recommend {
+    margin-top: 65px;
+}
+
+.recommend .cont-wrap .recommend-grp .thum {
+    width: 32.5%;
+    height: 29vw;
+}
+
+/* 온라인 체험 */
+.trend .cont-inner .trend-grp .thum:nth-child(1) {
+    height: 50vw;
+}
+
+.trend .cont-inner .trend-grp .thum {
+    height: 25vw;
+}
+
+.trend .cont-wrap .thum:first-child .info>.short-desc,
+.trend .cont-wrap .thum:last-child .info>.short-desc {
+    width: 70%;
+    padding: 7px 10px;
+}
+
+
+/* 프로모션 배너 */
+.promotion .bg-black .cont-inner {
+    padding: 4vw 3%;
+}
+
+.promotion .bg-black .tit {
+    font-size: 2.5vw;
+    line-height: 3vw;
+}
+
+.promotion .bg-black .desc {
+    width: 90%;
+    font-size: 1.5vw;
+    line-height: 2vw;
+}
+
+
+
+/* 다음 여행지 */
+.next-trip .cont-inner .next-trip-grp .thum {
+    width: 32.5%;
+    height: 8.5vw;
+    margin-right: 1.25%;
+}
+
+.next-trip .cont-inner .next-trip-grp .thum:nth-child(3n) {
+    margin-right: 0;
+}

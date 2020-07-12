@@ -1,0 +1,145 @@
+.cont-top {
+    padding: 0 20px;
+}
+
+.cont-inner {
+    padding: 0 20px;
+}
+
+
+/* close */
+.close {
+    padding: 0 3%;
+}
+
+
+/* top banner */
+.top-banner .close {
+    right: 3%;
+}
+
+
+.ui-cont {
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.util-wrap ul {
+    margin-right: 0;
+}
+
+
+.util-wrap,
+.gnb {
+    padding: 0 3%;
+}
+
+.nav-aside li.icon {
+    display: block;
+    width: 25px;
+    padding: 0 12px;
+}
+
+
+
+.top-search-area.on .dimmed {
+    display: block;
+}
+
+.modal-box {
+    width: 90%;
+    margin: 0 5%;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.modal-cont .cont-wrap {
+    margin: 10px 0 30px;
+}
+
+.modal-cont .cont-inner ul .thum .name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+
+
+/* footer */
+
+.footer-inner {
+    width: 100%;
+    padding: 0 3%;
+    box-sizing: border-box;
+}
+
+.footer-left-area {
+    float: unset;
+    width: 100%;
+    margin: auto;
+    padding: 5vw 0;
+}
+
+.footer-left-area .btn-grp li {
+    width: 24%;
+}
+
+.footer-left-area .btn-grp>li>a {
+    font-size: 1.5vw;
+}
+
+.footer-left-area .global-grp {
+    text-align: center;
+}
+
+
+.footer-right-area {
+    float: unset;
+    width: 100%;
+    margin: auto;
+    padding-bottom: 3.5vw;
+}
+
+.footer-right-area .company-service {
+    position: relative;
+    width: 25%;
+    padding: 0 1.5%
+}
+
+.footer-right-area .company-service:after {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: #dcdcdc;
+}
+
+.footer-right-area .company-service:last-child:after {
+    display: none;
+}
+
+.footer-bottom-area {
+    height: auto;
+}
+
+.footer-bottom-area .sns-grp {
+    float: unset;
+    text-align: center;
+    line-height: 7vw;
+}
+
+.footer-bottom-area .sns-grp li:last-child {
+    margin-right: 0;
+}
+
+.footer-bottom-area .copy {
+    float: unset;
+    font-size: 1.5vw;
+    text-align: center;
+    line-height: 5vw;
+}

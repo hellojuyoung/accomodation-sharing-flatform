@@ -1,0 +1,285 @@
+input {
+    height: 40px;
+}
+
+.ui-datepicker-trigger {
+    right: 10px;
+    bottom: 16%;
+}
+
+
+.ui-cont {
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cont-top {
+    padding: 0 5%;
+}
+
+.cont-top .tit:after {
+    height: 3px;
+}
+
+.cont-inner {
+    padding: 0 5%;
+}
+
+.cont-tabs .tabs li.on {
+    border-bottom-width: 2px;
+}
+
+
+/* close */
+.close {
+    height: 50px;
+    padding: 0 3%;
+}
+
+
+
+/* button */
+.btn.b-mid {
+    height: 40px;
+    line-height: 40px;
+    font-size: .8rem;
+}
+
+/* badge */
+.badge-new::after {
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    right: -16px;
+}
+
+
+/* top banner */
+.top-banner {
+    z-index: 998;
+}
+
+.top-banner .close {
+    width: 3vw;
+    height: 3vw;
+    top: 50%;
+    right: 3%;
+    margin-top: -1.5vw;
+    background-size: contain;
+}
+
+.top-banner a {
+    font-size: .65rem;
+}
+
+
+
+/* header */
+.util-wrap {
+    display: none;
+}
+
+.util-wrap ul {
+    margin-right: 0;
+}
+
+
+.util-wrap,
+.gnb {
+    padding: 0 5%;
+}
+
+.gnb-wrap {
+    height: 60px;
+}
+
+.gnb-wrap .gnb h1 {
+    width: 110px;
+    margin-top: 13px;
+}
+
+.gnb-wrap .gnb h1 img {
+    width: 100%;
+}
+
+nav {
+    margin-right: 0;
+}
+
+nav ul {
+    margin-top: 17px;
+}
+
+nav .nav-grp {
+    display: none;
+}
+
+.nav-aside li.icon {
+    display: block;
+    width: 25px;
+    padding: 0;
+}
+
+.nav-aside li.icon>a {
+    margin-top: 0;
+}
+
+.nav-aside li.icon.gnb-mypage {
+    display: none;
+}
+
+
+/* top search area */
+.top-search-area.on .dimmed {
+    display: block;
+}
+
+
+
+.header-bottom-area.on .dimmed {
+    display: block;
+}
+
+.modal-box {
+    width: 90%;
+    margin: 0 5%;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.modal-cont {
+    width: 100%;
+    max-height: 80%;
+}
+
+.modal-cont .cont-wrap {
+    margin: 10px 0 25px;
+}
+
+.modal-cont .cont-inner {
+    max-height: 110vw;
+}
+
+.modal-cont .cont-inner ul .thum {
+    width: 100%;
+    margin-bottom: 5px;
+    margin-right: 0;
+}
+
+.modal-cont .cont-inner ul .thum .name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+
+
+/* footer */
+
+.footer-inner {
+    width: 100%;
+    padding: 0 5%;
+    box-sizing: border-box;
+}
+
+.footer-left-area {
+    float: unset;
+    width: 100%;
+    margin: auto;
+    padding: 5vw 0;
+}
+
+.footer-left-area .btn-grp li {
+    width: 49%;
+}
+
+.footer-left-area .btn-grp>li>a {
+    height: 30px;
+    font-size: .6rem;
+    line-height: 30px;
+}
+
+.footer-left-area .global-grp {
+    text-align: center;
+}
+
+
+.footer-right-area {
+    float: unset;
+    width: 100%;
+    margin: auto;
+    padding-bottom: 3.5vw;
+    flex-wrap: wrap;
+}
+
+.footer-right-area .company-service {
+    position: relative;
+    width: 45%;
+    padding: 0 2.5%;
+    margin-bottom: 15px;
+}
+
+.footer-right-area .company-service .tit {
+    font-size: .5rem;
+}
+
+.footer-right-area .company-service:after {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: #dcdcdc;
+}
+
+.footer-right-area .company-service:nth-child(2n):after {
+    display: none;
+}
+
+.footer-right-area .company-service:last-child:after {
+    display: none;
+}
+
+.footer-right-area .company-service .service-grp>li {
+    margin-bottom: 7px;
+}
+
+.footer-right-area .company-service .service-grp>li:last-child {
+    margin-bottom: 0;
+}
+
+.footer-right-area .company-service .service-grp>li>a {
+    display: block;
+    line-height: 1rem;
+}
+
+.footer-bottom-area {
+    height: auto;
+    padding: 10px 0;
+}
+
+.footer-bottom-area .sns-grp {
+    float: unset;
+    text-align: center;
+    line-height: 7vw;
+}
+
+.footer-bottom-area .sns-grp li:last-child {
+    margin-right: 0;
+}
+
+.footer-bottom-area .copy {
+    float: unset;
+    font-size: 1.5vw;
+    text-align: center;
+    line-height: 5vw;
+}
+
+
+.scroll-top-wrap.scroll {
+    bottom: 70px;
+}
