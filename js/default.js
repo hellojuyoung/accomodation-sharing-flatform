@@ -3,20 +3,22 @@ $(document).ready(function () {
     $('.topvis-banner').bxSlider({
         auto: true,
         autoControls: true,
-        stopAutoOnClick: false,
+        stopAutoOnClick: true,
         //controls: false,
-        pager: false
+        pager: true,
+        pagerType: 'short'
     });
 
     //topBanner+ui-header
-    let topBannerH = $('.topBanner').height();
+    var topBannerH = $('.top-banner').height();
+
 
     if ($('.top-banner').hasClass('on')) {
         $('.ui-header').css({
-            marginTop: 40
+            marginTop: topBannerH + 'px'
         });
         $('#main').css({
-            marginTop: 40
+            marginTop: topBannerH + 'px'
         });
     } else {
         $('.ui-header').css({
@@ -45,8 +47,25 @@ $(document).ready(function () {
         yearSuffix: "년"
     });
 
+    //반응형 웹을 위한 이벤트 분리
+    $(window).resize(function () {
+        addDeviceClass();
+    });
 
+    function addDeviceClass() {
+        if ($(window).width() > 1199) {
+            $('body').removeClass('tablet mobile');
+        } else if ($(window).width() > 767) {
+            $('body').addClass('tablet');
+        } else
+            $('body').removeClass('tablet').addClass('mobile'); {}
+    }
+
+    addDeviceClass();
 });
+
+
+
 
 
 //topBanner 닫기
@@ -64,19 +83,56 @@ function topBannerEvt() {
 function mainScrollEvt() {
 
     $(window).scroll(function () {
-        let windowTop = $(this).scrollTop();
 
-        if (windowTop > 40) {
-            $('header').addClass('scroll');
-            $('nav li.icon').addClass('on');
-            $('.scroll-top-wrap').addClass('scroll');
-            $('.header-bottom-area').show();
-        } else {
-            $('header').removeClass('scroll');
-            $('nav li.icon').removeClass('on');
-            $('.scroll-top-wrap').removeClass('scroll');
-            $('.header-bottom-area').css('top', -200).removeClass('on').hide();
+        var windowTop = $(this).scrollTop();
+
+        //header 스크롤 이벤트 (Web)
+        function mainScrollWeb() {
+            if (windowTop > 40) {
+                $('header').addClass('scroll');
+                $('nav li.icon').addClass('on');
+                $('.scroll-top-wrap').addClass('scroll');
+            } else {
+                $('header').removeClass('scroll');
+                $('nav li.icon').removeClass('on');
+                $('.scroll-top-wrap').removeClass('scroll');
+                $('.top-search-area').children('.booking-box').css('top', -300);
+                $('.top-search-area').removeClass('on');
+            }
         }
+
+        //header 스크롤 이벤트 (Tablet)
+        function mainScrollTablet() {
+            if (windowTop > 40) {
+                $('header').addClass('scroll');
+                $('nav li.icon').addClass('on');
+                $('.scroll-top-wrap').addClass('scroll');
+            } else {
+                $('header').removeClass('scroll');
+                $('nav li.icon').removeClass('on');
+                $('.scroll-top-wrap').removeClass('scroll');
+            }
+        }
+
+        //header 스크롤 이벤트 (Mobile)
+        function mainScrollMobile() {
+            if (windowTop > 40) {
+                $('.scroll-top-wrap').addClass('scroll');
+                $('.shortcut-fix-menu').addClass('scroll');
+            } else {
+                $('.scroll-top-wrap').removeClass('scroll');
+                $('.shortcut-fix-menu').removeClass('scroll');
+            }
+        }
+
+        if ($('body').hasClass('tablet')) {
+            mainScrollTablet();
+        } else if ($('body').hasClass('mobile')) {
+            mainScrollMobile();
+        } else {
+            mainScrollWeb();
+        }
+
     });
 
 }
@@ -89,24 +145,42 @@ function scrollTopEvt() {
     //alert('wrk');
 }
 
+
 //gnb 숙소검색 show
 function showGnbSearch() {
-    $('.icon.gnb-search').click(function () {
 
-        var findSearchBox = $('.header-bottom-area.booking-box');
-        var getHeaderH = $('.ui-header').height() - 5;
+    var findSearchWrap = $('.top-search-area');
+    var findSearchBox = $('.top-search-area').children('.booking-box')
+    var getHeaderH = $('.ui-header').height() - 5;
 
-        if ($(findSearchBox).hasClass('on')) {
-            $(findSearchBox).css({
-                top: -200
-            });
-            $(findSearchBox).removeClass('on');
-        } else {
-            $(findSearchBox).css({
-                top: getHeaderH + 'px'
-            });
-            $(findSearchBox).addClass('on');
+    $('.gnb-search').click(function () {
+
+        //top-search-area 내 검색버튼 클릭 이벤트 (Web)
+        function animateSearchAreaWeb() {
+            if (findSearchWrap.hasClass('on')) {
+                findSearchBox.css({
+                    top: -300
+                });
+                findSearchWrap.removeClass('on');
+            } else {
+                findSearchBox.css({
+                    top: getHeaderH + 'px'
+                });
+                findSearchWrap.addClass('on');
+            }
         }
+
+        if ($('body').hasClass('tablet') || $('body').hasClass('mobile')) {
+            //top-search-area 내 검색버튼 클릭 이벤트 (tablet, mobile)
+            findSearchWrap.addClass('on');
+            findSearchBox.css('top', unset);
+        } else {
+            animateSearchAreaWeb();
+        }
+    });
+
+    $('.booking-box .close > img, .dimmed').click(function () {
+        findSearchWrap.removeClass('on');
     });
 }
 
