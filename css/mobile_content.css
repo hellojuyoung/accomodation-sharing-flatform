@@ -402,6 +402,7 @@
 
 .shortcut-fix-menu.scroll {
     bottom: 0;
+    display: block;
 }
 
 .shortcut-fix-menu ul {
