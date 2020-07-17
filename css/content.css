@@ -137,7 +137,6 @@
     margin-top: 60px;
     transition: opacity .6s .6s;
     opacity: 0;
-    /*animation: riseUp 1.5s .6s linear;*/
 }
 
 
@@ -330,6 +329,10 @@
 
 .top-search-area .field-count-guest .count-wrap .btn.down {
     left: 5px;
+}
+
+.top-search-area .panel-cont .box-show .field-date>span {
+    margin-top: 60px;
 }
 
 .top-search-area .close {

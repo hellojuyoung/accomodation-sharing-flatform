@@ -134,7 +134,6 @@ function mainScrollEvt() {
         }
 
     });
-
 }
 
 //scrollTop evt
@@ -142,7 +141,6 @@ function scrollTopEvt() {
     $('html, body').animate({
         scrollTop: 0
     }, 300);
-    //alert('wrk');
 }
 
 
@@ -173,7 +171,6 @@ function showGnbSearch() {
         if ($('body').hasClass('tablet') || $('body').hasClass('mobile')) {
             //top-search-area 내 검색버튼 클릭 이벤트 (tablet, mobile)
             findSearchWrap.addClass('on');
-            findSearchBox.css('top', unset);
         } else {
             animateSearchAreaWeb();
         }

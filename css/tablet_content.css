@@ -232,6 +232,10 @@
 
 
 /* 다음 여행지 */
+.next-trip .cont-inner .next-trip-grp {
+    justify-content: unset;
+}
+
 .next-trip .cont-inner .next-trip-grp .thum {
     width: 32.5%;
     height: 8.5vw;
