@@ -329,6 +329,7 @@
 
 .top-search-area .field-count-guest .count-wrap .btn.down {
     left: 5px;
+   font-size:0;
 }
 
 .top-search-area .panel-cont .box-show .field-date>span {
@@ -351,7 +352,8 @@
 }
 
 .field-count-guest .count-wrap .btn.up:hover {
-    background: url(../img/common/count_up_pink.png) no-repeat 0;
+    background: url(../img/common/count_up_pink.png) no-repeat;
+   background-position: right;
 }
 
 
@@ -469,6 +471,7 @@
 
 .top-search-area .field-count-guest .count-wrap .btn.up {
     right: 5px;
+   font-size:0;
 }
 
 

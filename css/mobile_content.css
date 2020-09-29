@@ -104,12 +104,17 @@
     left: 15px;
 }
 
+.top-search-area .panel-cont .box-show .field-date>span {
+    margin-top: 7vw;
+}
+
 .panel-cont .box-show .sub-tit {
     margin-bottom: 5px;
 }
 
 .panel-cont .box-show .field-date>span {
     margin-top: 9%;
+
 }
 
 .field-count-guest .count-wrap .count {
